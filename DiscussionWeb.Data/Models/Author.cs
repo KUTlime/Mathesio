@@ -13,22 +13,22 @@ namespace DiscussionWeb.Data.Models
 		[Key]
 		public Guid Id { get; set; }
 
-		[DisplayName("First Name")]
+		[Display(Name = "First Name")]
 		[Required]
 		[MaxLength(50)]
 		public string FirstName { get; set; }
 
-		[DisplayName("Last Name")]
+		[Display(Name = "Last Name")]
 		[Required]
 		[MaxLength(100)]
 		public string LastName { get; set; }
 
-		[DisplayName("Nick Name")]
+		[Display(Name = "Nick Name")]
 		[Required]
 		[MaxLength(50)]
 		public string NickName { get; set; }
 
-		[DisplayName("Registration email")]
+		[Display(Name = "Registration email")]
 		[Required]
 		[MaxLength(100)]
 		public string RegistrationEmail { get; set; }

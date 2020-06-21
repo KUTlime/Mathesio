@@ -79,32 +79,32 @@ namespace DiscussionWeb.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Authors",
                 columns: new[] { "Id", "FirstName", "LastName", "NickName", "Permission", "Registered", "RegistrationEmail" },
-                values: new object[] { new Guid("a28888e9-2ba9-473a-a40f-e38cb54f9b35"), "Tony", "Stark", "Ironman", (byte)1, new DateTime(2020, 6, 21, 20, 51, 18, 171, DateTimeKind.Utc).AddTicks(1076), "iron@man.cz" });
+                values: new object[] { new Guid("a28888e9-2ba9-473a-a40f-e38cb54f9b35"), "Tony", "Stark", "Ironman", (byte)1, new DateTime(2020, 6, 21, 20, 57, 8, 192, DateTimeKind.Utc).AddTicks(6349), "iron@man.cz" });
 
             migrationBuilder.InsertData(
                 table: "Authors",
                 columns: new[] { "Id", "FirstName", "LastName", "NickName", "Permission", "Registered", "RegistrationEmail" },
-                values: new object[] { new Guid("b28888e9-2ba9-473a-a40f-e38cb54f9b35"), "Bruce", "Wayne", "Batman", (byte)1, new DateTime(2020, 6, 21, 20, 51, 18, 171, DateTimeKind.Utc).AddTicks(1497), "bat@man.cz" });
+                values: new object[] { new Guid("b28888e9-2ba9-473a-a40f-e38cb54f9b35"), "Bruce", "Wayne", "Batman", (byte)1, new DateTime(2020, 6, 21, 20, 57, 8, 192, DateTimeKind.Utc).AddTicks(6802), "bat@man.cz" });
 
             migrationBuilder.InsertData(
                 table: "Threads",
                 columns: new[] { "Id", "AuthorId", "Description", "LastEdited", "NumberOfEdits", "Posted", "Title" },
-                values: new object[] { new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"), new Guid("a28888e9-2ba9-473a-a40f-e38cb54f9b35"), "A general discussion about life universe and everything", new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3302), 0L, new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(2929), "General Discussion" });
+                values: new object[] { new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"), new Guid("a28888e9-2ba9-473a-a40f-e38cb54f9b35"), "A general discussion about life universe and everything", new DateTime(2020, 6, 21, 20, 57, 8, 201, DateTimeKind.Utc).AddTicks(4335), 0L, new DateTime(2020, 6, 21, 20, 57, 8, 201, DateTimeKind.Utc).AddTicks(3929), "General Discussion" });
 
             migrationBuilder.InsertData(
                 table: "Threads",
                 columns: new[] { "Id", "AuthorId", "Description", "LastEdited", "NumberOfEdits", "Posted", "Title" },
-                values: new object[] { new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97"), new Guid("b28888e9-2ba9-473a-a40f-e38cb54f9b35"), "A general discussion about C#.", new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3981), 0L, new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3969), "Csharp Discussion" });
+                values: new object[] { new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97"), new Guid("b28888e9-2ba9-473a-a40f-e38cb54f9b35"), "A general discussion about C#.", new DateTime(2020, 6, 21, 20, 57, 8, 201, DateTimeKind.Utc).AddTicks(5162), 0L, new DateTime(2020, 6, 21, 20, 57, 8, 201, DateTimeKind.Utc).AddTicks(5146), "Csharp Discussion" });
 
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "Id", "AuthorId", "LastEdited", "Message", "NumberOfEdits", "Posted", "ThreadId" },
-                values: new object[] { new Guid("28c1db41-f104-46e6-8943-d31c0291e0e3"), null, new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(466), "Hello world!", 0L, new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(140), new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b") });
+                values: new object[] { new Guid("28c1db41-f104-46e6-8943-d31c0291e0e3"), null, new DateTime(2020, 6, 21, 20, 57, 8, 202, DateTimeKind.Utc).AddTicks(2457), "Hello world!", 0L, new DateTime(2020, 6, 21, 20, 57, 8, 202, DateTimeKind.Utc).AddTicks(1815), new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b") });
 
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "Id", "AuthorId", "LastEdited", "Message", "NumberOfEdits", "Posted", "ThreadId" },
-                values: new object[] { new Guid("d94a64c2-2e8f-4162-9976-0ffe03d30767"), null, new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(1114), "Hello csharp!", 0L, new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(1099), new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97") });
+                values: new object[] { new Guid("d94a64c2-2e8f-4162-9976-0ffe03d30767"), null, new DateTime(2020, 6, 21, 20, 57, 8, 202, DateTimeKind.Utc).AddTicks(3171), "Hello csharp!", 0L, new DateTime(2020, 6, 21, 20, 57, 8, 202, DateTimeKind.Utc).AddTicks(3158), new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_AuthorId",

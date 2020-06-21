@@ -28,12 +28,12 @@ namespace DiscussionWeb.Data.Models
 		[DataType(DataType.DateTime)]
 		public DateTime Posted { get; set; }
 
-		[DisplayName("Last Edited")]
+		[Display(Name = "Last Edited")]
 		[Required]
 		[DataType(DataType.DateTime)]
 		public DateTime LastEdited { get; set; }
 
-		[DisplayName("Number of edits")]
+		[Display(Name = "Number of edits")]
 		[Required]
 		public UInt32 NumberOfEdits { get; set; }
 	}
