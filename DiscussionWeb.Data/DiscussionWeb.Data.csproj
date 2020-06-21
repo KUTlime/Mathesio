@@ -6,8 +6,20 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Folder Include="DbContexts\" />
-	  <Folder Include="Services\" />
+	  <Compile Remove="Migrations\20200621193043_InitialMigration.cs" />
+	  <Compile Remove="Migrations\20200621193043_InitialMigration.Designer.cs" />
+	  <Compile Remove="Migrations\20200621202715_InitialMigration.cs" />
+	  <Compile Remove="Migrations\20200621202715_InitialMigration.Designer.cs" />
+	  <Compile Remove="Migrations\20200621202910_InitialMigration.cs" />
+	  <Compile Remove="Migrations\20200621202910_InitialMigration.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DiscussionWeb\DiscussionWeb.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -16,6 +16,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
+using DiscussionWeb.Data.DbContexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace DiscussionWeb.Host
 {
@@ -31,6 +33,7 @@ namespace DiscussionWeb.Host
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services
+				.AddDbContext<DiscussionWebDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocalDb")))
 				.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies())
 				.AddControllers(options => options.ReturnHttpNotAcceptable = true)
 				.AddXmlDataContractSerializerFormatters()
@@ -68,7 +71,7 @@ namespace DiscussionWeb.Host
 							 actionExecutingContext?.ActionArguments.Count ==
 							 context.ActionDescriptor.Parameters.Count))
 						{
-							problemDetails.Type = "https://courselibrary.com/modelvalidationproblem";
+							problemDetails.Type = "https://postlibrary.com/modelvalidationproblem";
 							problemDetails.Status = StatusCodes.Status422UnprocessableEntity;
 							problemDetails.Title = "One or more validation errors occurred.";
 
