@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
@@ -12,21 +13,22 @@ namespace DiscussionWeb.Data.Models
 		[Key]
 		public Guid Id { get; set; }
 
+		[DisplayName("First Name")]
 		[Required]
 		[MaxLength(50)]
 		public string FirstName { get; set; }
 
-
+		[DisplayName("Last Name")]
 		[Required]
 		[MaxLength(100)]
 		public string LastName { get; set; }
 
-
+		[DisplayName("Nick Name")]
 		[Required]
 		[MaxLength(50)]
 		public string NickName { get; set; }
 
-
+		[DisplayName("Registration email")]
 		[Required]
 		[MaxLength(100)]
 		public string RegistrationEmail { get; set; }

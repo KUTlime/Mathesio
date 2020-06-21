@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DiscussionWeb.Data.Migrations
 {
     [DbContext(typeof(DiscussionWebDbContext))]
-    [Migration("20200621204045_InitialMigration")]
+    [Migration("20200621205118_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,7 +65,7 @@ namespace DiscussionWeb.Data.Migrations
                             LastName = "Stark",
                             NickName = "Ironman",
                             Permission = (byte)1,
-                            Registered = new DateTime(2020, 6, 21, 20, 40, 45, 193, DateTimeKind.Utc).AddTicks(2745),
+                            Registered = new DateTime(2020, 6, 21, 20, 51, 18, 171, DateTimeKind.Utc).AddTicks(1076),
                             RegistrationEmail = "iron@man.cz"
                         },
                         new
@@ -75,7 +75,7 @@ namespace DiscussionWeb.Data.Migrations
                             LastName = "Wayne",
                             NickName = "Batman",
                             Permission = (byte)1,
-                            Registered = new DateTime(2020, 6, 21, 20, 40, 45, 193, DateTimeKind.Utc).AddTicks(3324),
+                            Registered = new DateTime(2020, 6, 21, 20, 51, 18, 171, DateTimeKind.Utc).AddTicks(1497),
                             RegistrationEmail = "bat@man.cz"
                         });
                 });
@@ -118,19 +118,19 @@ namespace DiscussionWeb.Data.Migrations
                         new
                         {
                             Id = new Guid("28c1db41-f104-46e6-8943-d31c0291e0e3"),
-                            LastEdited = new DateTime(2020, 6, 21, 20, 40, 45, 203, DateTimeKind.Utc).AddTicks(6040),
+                            LastEdited = new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(466),
                             Message = "Hello world!",
                             NumberOfEdits = 0L,
-                            Posted = new DateTime(2020, 6, 21, 20, 40, 45, 203, DateTimeKind.Utc).AddTicks(5477),
+                            Posted = new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(140),
                             ThreadId = new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b")
                         },
                         new
                         {
                             Id = new Guid("d94a64c2-2e8f-4162-9976-0ffe03d30767"),
-                            LastEdited = new DateTime(2020, 6, 21, 20, 40, 45, 203, DateTimeKind.Utc).AddTicks(7127),
+                            LastEdited = new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(1114),
                             Message = "Hello csharp!",
                             NumberOfEdits = 0L,
-                            Posted = new DateTime(2020, 6, 21, 20, 40, 45, 203, DateTimeKind.Utc).AddTicks(7110),
+                            Posted = new DateTime(2020, 6, 21, 20, 51, 18, 180, DateTimeKind.Utc).AddTicks(1099),
                             ThreadId = new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97")
                         });
                 });
@@ -176,9 +176,9 @@ namespace DiscussionWeb.Data.Migrations
                             Id = new Guid("5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"),
                             AuthorId = new Guid("a28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                             Description = "A general discussion about life universe and everything",
-                            LastEdited = new DateTime(2020, 6, 21, 20, 40, 45, 202, DateTimeKind.Utc).AddTicks(7377),
+                            LastEdited = new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3302),
                             NumberOfEdits = 0L,
-                            Posted = new DateTime(2020, 6, 21, 20, 40, 45, 202, DateTimeKind.Utc).AddTicks(6573),
+                            Posted = new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(2929),
                             Title = "General Discussion"
                         },
                         new
@@ -186,9 +186,9 @@ namespace DiscussionWeb.Data.Migrations
                             Id = new Guid("d173e20d-159e-4127-9ce9-b0ac2564ad97"),
                             AuthorId = new Guid("b28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                             Description = "A general discussion about C#.",
-                            LastEdited = new DateTime(2020, 6, 21, 20, 40, 45, 202, DateTimeKind.Utc).AddTicks(8738),
+                            LastEdited = new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3981),
                             NumberOfEdits = 0L,
-                            Posted = new DateTime(2020, 6, 21, 20, 40, 45, 202, DateTimeKind.Utc).AddTicks(8719),
+                            Posted = new DateTime(2020, 6, 21, 20, 51, 18, 179, DateTimeKind.Utc).AddTicks(3969),
                             Title = "Csharp Discussion"
                         });
                 });

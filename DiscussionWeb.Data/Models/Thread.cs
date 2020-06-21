@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -28,10 +29,12 @@ namespace DiscussionWeb.Data.Models
 		[DataType(DataType.DateTime)]
 		public DateTime Posted { get; set; }
 
+		[DisplayName("Last Edited")]
 		[Required]
 		[DataType(DataType.DateTime)]
 		public DateTime LastEdited { get; set; }
 
+		[DisplayName("Number of edits")]
 		[Required]
 		public UInt32 NumberOfEdits { get; set; }
 
