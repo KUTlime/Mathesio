@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<Nulllable>Enable</Nulllable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\DiscussionWeb.API\DiscussionWeb.API.csproj" />
+	  <ProjectReference Include="..\DiscussionWeb.Data\DiscussionWeb.Data.csproj" />
+	  <ProjectReference Include="..\DiscussionWeb\DiscussionWeb.csproj" />
+	</ItemGroup>
+
+
+</Project>

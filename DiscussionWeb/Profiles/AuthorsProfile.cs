@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using AutoMapper;
 
-namespace DiscussionWeb.API.Profiles
+namespace DiscussionWeb.Profiles
 {
 	internal class AuthorsProfile : Profile
 	{
