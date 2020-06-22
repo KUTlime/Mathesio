@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using DiscussionWeb.Data.Models;
+using DiscussionWeb.Data.ResourceParameters;
 using DiscussionWeb.ResourceParameters;
 
 namespace DiscussionWeb.Data.Services

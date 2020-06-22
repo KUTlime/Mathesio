@@ -4,12 +4,11 @@ using System.Linq;
 
 using DiscussionWeb.Data.DbContexts;
 using DiscussionWeb.Data.Models;
-using DiscussionWeb.Models;
+using DiscussionWeb.Data.ResourceParameters;
 using DiscussionWeb.ResourceParameters;
 
 namespace DiscussionWeb.Data.Services
 {
-
 
 	public class DiscussionWebRepository : IDiscussionWebRepository, IDisposable
 	{
@@ -132,7 +131,7 @@ namespace DiscussionWeb.Data.Services
 				throw new ArgumentNullException(nameof(authorsResourceParameters), "Can't map author's resource parameters.");
 			}
 
-			if (authorsResourceParameters.AccessLevel == AccessLevel.BasicUser
+			if (authorsResourceParameters.AccessLevel == 0
 				 && string.IsNullOrWhiteSpace(authorsResourceParameters.SearchQuery))
 			{
 				return GetAuthors();
@@ -140,7 +139,7 @@ namespace DiscussionWeb.Data.Services
 
 			var collection = _context.Authors as IQueryable<Author>;
 
-			if (authorsResourceParameters.AccessLevel != AccessLevel.BasicUser)
+			if (authorsResourceParameters.AccessLevel != 0)
 			{
 				collection = collection.Where(a => a.Permission == authorsResourceParameters.AccessLevel);
 			}

@@ -41,25 +41,21 @@ namespace DiscussionWeb.Host
 				{
 					setupAction.InvalidModelStateResponseFactory = context =>
 					{
-						// create a problem details object
-						var problemDetailsFactory = context.HttpContext.RequestServices
-							.GetRequiredService<ProblemDetailsFactory>();
-						var problemDetails = problemDetailsFactory.CreateValidationProblemDetails(
-							context.HttpContext,
-							context.ModelState);
+						// Create a problem details object
+						var problemDetailsFactory = context.HttpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+						var problemDetails = problemDetailsFactory.CreateValidationProblemDetails(context.HttpContext, context.ModelState);
 
-						// add additional info not added by default
+						// Add additional info not added by default
 						problemDetails.Detail = "See the errors field for details.";
 						problemDetails.Instance = context.HttpContext.Request.Path;
 
-						// find out which status code to use
-						var actionExecutingContext =
-							context as Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext;
+						// Find out which status code to use
+						var actionExecutingContext = context as Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext;
 
-						// if there are modelstate errors & all keys were correctly
-						// found/parsed we're dealing with validation errors
+						// If there are modelstate errors & all keys were correctly
+						// found/parsed we're dealing with validation errors.
 						//
-						// if the context couldn't be cast to an ActionExecutingContext
+						// If the context couldn't be cast to an ActionExecutingContext
 						// because it's a ControllerContext, we're dealing with an issue 
 						// that happened after the initial input was correctly parsed.  
 						// This happens, for example, when manually validating an object inside

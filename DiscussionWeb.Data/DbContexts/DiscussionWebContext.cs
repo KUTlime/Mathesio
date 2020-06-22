@@ -1,7 +1,6 @@
 ﻿using System;
 
 using DiscussionWeb.Data.Models;
-using DiscussionWeb.Models;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -29,7 +28,7 @@ namespace DiscussionWeb.Data.DbContexts
 					LastName = "Stark",
 					NickName = "Ironman",
 					RegistrationEmail = "iron@man.cz",
-					Permission = AccessLevel.Admin,
+					Permission = 1,
 					Registered = DateTime.UtcNow,
 				},
 				new Author()
@@ -39,7 +38,7 @@ namespace DiscussionWeb.Data.DbContexts
 					LastName = "Wayne",
 					NickName = "Batman",
 					RegistrationEmail = "bat@man.cz",
-					Permission = AccessLevel.Admin,
+					Permission = 1,
 					Registered = DateTime.UtcNow,
 				}
 				);

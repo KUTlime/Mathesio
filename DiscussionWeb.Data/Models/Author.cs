@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-using DiscussionWeb.Models;
 
 namespace DiscussionWeb.Data.Models
 {
@@ -42,6 +41,6 @@ namespace DiscussionWeb.Data.Models
 		public ICollection<Thread> Threads { get; set; }
 
 		[Required]
-		public AccessLevel Permission { get; set; }
+		public byte Permission { get; set; }
 	}
 }

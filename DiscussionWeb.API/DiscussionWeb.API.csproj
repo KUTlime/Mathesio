@@ -6,12 +6,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\DiscussionWeb.Data\DiscussionWeb.Data.csproj" />
-		<ProjectReference Include="..\DiscussionWeb\DiscussionWeb.csproj" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controllers\" />
+		<ProjectReference Include="..\DiscussionWeb.Data\DiscussionWeb.Data.csproj" />
+		<ProjectReference Include="..\DiscussionWeb\DiscussionWeb.csproj" />
 	</ItemGroup>
 
 </Project>
